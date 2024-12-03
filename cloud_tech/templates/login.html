@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #f895d7, #2575fc); /* Gradient background */
+            color: black;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .login-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: black;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: black;
+        }
+        .btn-primary {
+            background-color: #2575fc;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #1e63d1;
+        }
+        .small-text {
+            color: #ddd;
+        }
+        a.small-text:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        .btn-light {
+            background: white; /* Changed to white */
+            color: purple; /* Set text color to purple for better contrast */
+            border: none;
+        }
+        .btn-light:hover {
+            background: rgba(255, 255, 255, 0.8); /* Slight hover effect */
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card text-center">
+        <h1 class="mb-4">Welcome</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email Address" required name="uname">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" required name="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+            <div>
+                <a href="#" class="small-text">Forgot Password?</a>
+            </div>
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success alert-dismissible mt-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </form>
+        <div class="mt-4">
+            <p>New to the platform?</p>
+            <a href="register" class="btn btn-light w-100">Sign Up</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

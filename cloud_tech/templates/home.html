@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Navigation Bar</title>
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar container */
+        .navbar {
+            background-color: #232f3e; /* AWS dark blue */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* AWS logo section */
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Left section of the navbar */
+        .navbar .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Right section */
+        .navbar .right-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar .button {
+            background-color: #ffa842; /* AWS orange */
+            color: #232f3e;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navbar .button:hover {
+            background-color: #ff9900;
+        }
+
+        .navbar .icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="navbar">
+        <!-- Left side -->
+        <div class="logo">
+            <img src="{% static 'images/Blue Cloud Minimal Technology Free Logo .png' %}" alt="AWS Logo">
+            <!-- <span>re:Invent</span> -->
+        </div>
+        <div class="links">
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Pricing</a>
+            <a href="#">Documentation</a>
+            <a href="#">Learn</a>
+            <!-- <a href="#">Partner Network</a>
+            <a href="#">AWS Marketplace</a> -->
+            <a href="#">Customer Enablement</a>
+            <a href="#">Events</a>
+            <a href="#">Explore More</a>
+        </div>
+        <!-- Right side -->
+        <div class="right-section">
+            <a href="#">About AWS</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Support</a>
+            <a href="#">English</a>
+            <a href="#">My Account</a>
+            <a href="#">Sign In</a>
+           
+            <button class="button">Create Account</button>
+            <div class="icon">&#128100;</div>
+        </div>
+    </div>
+
+
+
+<style>
+    /* General reset */
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Dark background */
+        color: #fff; /* White text */
+    }
+
+    /* Container for the content */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full screen height */
+        background-image: linear-gradient(to bottom, #030c1e, #0c1f3a);
+    }
+
+    /* Content styles */
+    .content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Header text */
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    /* Subheading text */
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    /* Link for "Learn more" */
+    .learn-more {
+        display: inline-block;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        color: #009cff; /* Bright blue color */
+        text-decoration: none;
+    }
+
+    .learn-more:hover {
+        text-decoration: underline;
+    }
+
+    /* Call-to-action button */
+    .cta-button {
+        background-color: #f7941e; /* Orange color */
+        color: #000; /* Black text */
+        border: none;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #d37900; /* Darker orange for hover */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>CLOUD TECH</h1>
+        <p>Gain free, hands-on experience with the CLOUD TECH products and services</p>
+        <a href="#" class="learn-more">Learn more about CLOUD TECH Free Tier</a>
+        <button class="cta-button">Create a Free Account</button>
+    </div>
+</div>
+---------------------------
+
+</body>
+</html>
