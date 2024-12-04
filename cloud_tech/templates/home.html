@@ -1,197 +1,392 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Navigation Bar</title>
+    <title>Cloud_Tech</title>
+    <link rel="stylesheet" href="/cloud_tech/static/images/home.css">
     <style>
-        /* General styling */
+        /* CSS Styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* Navigation bar container */
         .navbar {
-            background-color: #232f3e; /* AWS dark blue */
-            color: white;
-            padding: 10px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            background-color: #faa2e4; /* Blue background */
+            padding: 10px 20px;
         }
 
-        /* AWS logo section */
-        .navbar .logo {
+        .logo img {
+            height: 30px; /* Adjust the height to fit */
+        }
+
+        .menu {
             display: flex;
             align-items: center;
+            gap: 15px;
         }
 
-        .navbar .logo img {
-            height: 20px;
-            margin-right: 10px;
+        .upgrade-btn {
+            background-color: #28A745; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
         }
 
-        /* Left section of the navbar */
-        .navbar .links {
-            display: flex;
-            gap: 20px;
+        .upgrade-btn:hover {
+            background-color: #218838;
         }
 
-        .navbar .links a {
+        .nav-link {
             color: white;
             text-decoration: none;
             font-size: 14px;
         }
 
-        .navbar .links a:hover {
+        .nav-link:hover {
             text-decoration: underline;
         }
 
-        /* Right section */
-        .navbar .right-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .navbar .button {
-            background-color: #ffa842; /* AWS orange */
-            color: #232f3e;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .navbar .button:hover {
-            background-color: #ff9900;
-        }
-
-        .navbar .icon {
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
+        .social-icon img {
+            height: 20px; /* Adjust size of the social icon */
         }
     </style>
 </head>
 <body>
-   
     <div class="navbar">
-        <!-- Left side -->
         <div class="logo">
-            <img src="{% static 'images/Blue Cloud Minimal Technology Free Logo .png' %}" alt="AWS Logo">
-            <!-- <span>re:Invent</span> -->
+            {% load static %}
+            <img src="{%static 'images/Blue Cloud Minimal Technology Free Logo .png' %}" alt="MediaFire Logo">
         </div>
-        <div class="links">
-            <a href="#">Products</a>
-            <a href="#">Solutions</a>
-            <a href="#">Pricing</a>
-            <a href="#">Documentation</a>
-            <a href="#">Learn</a>
-            <!-- <a href="#">Partner Network</a>
-            <a href="#">AWS Marketplace</a> -->
-            <a href="#">Customer Enablement</a>
-            <a href="#">Events</a>
-            <a href="#">Explore More</a>
-        </div>
-        <!-- Right side -->
-        <div class="right-section">
-            <a href="#">About AWS</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Support</a>
-            <a href="#">English</a>
-            <a href="#">My Account</a>
-            <a href="#">Sign In</a>
-           
-            <button class="button">Create Account</button>
-            <div class="icon">&#128100;</div>
+        <div class="menu">
+            <button class="upgrade-btn">UPGRADE</button>
+            <a href="#" class="nav-link">SIGN UP</a>
+            <a href="#" class="nav-link">LOG IN</a>
+            <a href="#" class="social-icon">
+                <img src="twitter-icon.png" alt="Twitter">
+            </a>
         </div>
     </div>
 
 
 
 <style>
-    /* General reset */
-    body, html {
+    /* General Reset */
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        background-color: #000; /* Dark background */
-        color: #fff; /* White text */
     }
 
-    /* Container for the content */
-    .container {
+    body, html {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-color: #eea3e8; /* Dark blue background */
+        color: white;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Full screen height */
-        background-image: linear-gradient(to bottom, #030c1e, #0c1f3a);
+        background-image: url('background-pattern.png'); /* Replace with your pattern image */
+        background-size: cover;
+        background-repeat: repeat;
     }
 
-    /* Content styles */
+    /* Content Inside Hero */
     .content {
         text-align: center;
-        padding: 20px;
     }
 
-    /* Header text */
-    h1 {
-        font-size: 3rem;
+    .content h1 {
+        font-size: 2.5rem;
         margin-bottom: 20px;
+        line-height: 1.4;
     }
 
-    /* Subheading text */
-    p {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-    }
-
-    /* Link for "Learn more" */
-    .learn-more {
-        display: inline-block;
-        margin-bottom: 25px;
-        font-size: 1rem;
-        color: #009cff; /* Bright blue color */
-        text-decoration: none;
-    }
-
-    .learn-more:hover {
-        text-decoration: underline;
-    }
-
-    /* Call-to-action button */
-    .cta-button {
-        background-color: #f7941e; /* Orange color */
-        color: #000; /* Black text */
+    /* Upload Button */
+    .upload-btn {
+        background-color: #f3b8df; /* Bright blue button */
+        color: white;
         border: none;
         padding: 15px 30px;
         font-size: 1rem;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        text-transform: uppercase;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
     }
 
-    .cta-button:hover {
-        background-color: #d37900; /* Darker orange for hover */
+    .upload-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
     }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="hero">
     <div class="content">
-        <h1>CLOUD TECH</h1>
-        <p>Gain free, hands-on experience with the CLOUD TECH products and services</p>
-        <a href="#" class="learn-more">Learn more about CLOUD TECH Free Tier</a>
-        <button class="cta-button">Create a Free Account</button>
+        <h1>File storage and sharing made simple</h1>
+        <button class="upload-btn">UPLOAD FILES NOW</button>
     </div>
 </div>
----------------------------
 
+
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #b1f087;
+}
+
+.as-seen-in {
+    margin: 50px 0;
+    color: #999999;
+}
+
+.as-seen-in h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logos img {
+    max-height: 40px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.logos img:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="as-seen-in">
+<h2>As Seen In</h2>
+<div class="logos">
+    <img src="{%static 'images/gizmodo.svg' %}" alt="Gizmodo">
+    <img src="{%static 'images/lifehacker.svg' %}" alt="Lifehacker">
+    <img src="{%static 'images/cnet.svg' %}" alt="CNET">
+    <!-- <img src="techcrunch-logo.png" alt="TechCrunch"> -->
+    <img src="{%static 'images/engadget.svg' %}" alt="Engadget">
+</div>
+</div>
+
+
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f7f2; /* Light background color */
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #0078ff; /* Blue color for the heading */
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555; /* Darker gray for text */
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Handles all of your file needs</h1>
+    <p>
+      File storage made easy – including powerful features you won’t find anywhere else.
+      Whether you’re sharing photos, videos, audio, or docs, MediaFire can simplify your workflow.
+    </p>
+  </div>
+  
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8fa;
+      color: #333;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .feature-item {
+      max-width: 200px;
+    }
+
+    .feature-item img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      color: #0078ff; /* Blue color for headings */
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #555; /* Darker gray for text */
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="features">
+    <div class="feature-item">
+      <img src="{%static 'images/Screenshot 2024-12-04 at 19-41-57 File sharing and storage made simple.png' %}" alt="Share Icon">
+      <h3>SHARE</h3>
+      <p>
+        Share through email, link, or social network. Unlimited ad-supported downloads with no wait times.
+      </p>
+    </div>
+    <div class="feature-item">
+      <img src="{%static 'images/Screenshot 2024-12-04 at 19-44-03 File sharing and storage made simple.png' %}" alt="Collaborate Icon">
+      <h3>COLLABORATE</h3>
+      <p>
+        Store and share any file type. Share folders of project files. Easily email large files.
+      </p>
+    </div>
+    <div class="feature-item">
+      <img src="{%static 'images/Screenshot 2024-12-04 at 19-46-42 File sharing and storage made simple.png' %}" alt="Store Icon">
+      <h3>STORE</h3>
+      <p>
+        10GB for free. Up to 50GB free with bonuses. Store all your photos, audio, and videos.
+      </p>
+    </div>
+    <div class="feature-item">
+      <img src="{%static 'images/Screenshot 2024-12-04 at 19-48-27 File sharing and storage made simple.png' %}" alt="Access Icon">
+      <h3>ACCESS</h3>
+      <p>
+        Always have your important files with you. Never forget your work at home. View, manage, and share from anywhere.
+      </p>
+    </div>
+  </div>
+------------------------------------
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1eeee;
+        color: #fff;
+    }
+
+    .testimonial-container {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .testimonial-container h1 {
+        color: #58a6ff;
+        margin-bottom: 40px;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .testimonial {
+        background-color: #4d4b4b;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+
+    .testimonial h3 {
+        color: #58a6ff;
+        margin-bottom: 10px;
+    }
+
+    .testimonial p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #ddd;
+    }
+
+    .testimonial .author {
+        margin-top: 15px;
+        font-size: 12px;
+        font-style: italic;
+        color: #58a6ff;
+    }
+</style>
+</head>
+<body>
+<div class="testimonial-container">
+    <h1>Over 150 million people trust Cloud Tech every month</h1>
+    <div class="testimonials">
+        <div class="testimonial">
+            <h3>GREAT FOR OUR GROUP</h3>
+            <p>We use MediaFire to share sheet music and audio practice files for our chorus. I can practice along to audio in the car using the mobile app, print the sheet music from my desktop, etc. Easy to use & very helpful to our group.</p>
+            <p class="author">– Choralmember</p>
+        </div>
+        <div class="testimonial">
+            <h3>ONE OF MY FAVORITE APPS!</h3>
+            <p>Perfect for storing all files in the cloud. I’ve used this daily for the past year and absolutely love it. Great for saving audio recordings, documents, photos, videos, etc. I’m very happy to have found MediaFire. Thank you, it has really helped me time and again.</p>
+            <p class="author">– TheNewYorkTimesFan</p>
+        </div>
+        <div class="testimonial">
+            <h3>GREAT APP!</h3>
+            <p>I like this service a lot since I work in TV and Film and use it for sending low-res effects shots or just collaborating with friends or coworkers. I invested and purchased one of their offered plans but the free one is great too. I say run don’t walk and go have fun with this whether business or just your own convenience!</p>
+            <p class="author">– Frostbite Films</p>
+        </div>
+    </div>
+</div>
+
+------------------------------------
 </body>
 </html>
