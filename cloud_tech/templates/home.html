@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #faa2e4; /* Blue background */
+            background-color: #da05a4; /* Blue background */
             padding: 10px 20px;
         }
 
@@ -70,8 +70,9 @@
             <button class="upgrade-btn">UPGRADE</button>
             <a href="#" class="nav-link">SIGN UP</a>
             <a href="#" class="nav-link">LOG IN</a>
-            <a href="#" class="social-icon">
-                <img src="twitter-icon.png" alt="Twitter">
+            <a href="#" class="nav-link">LOG OUT</a>
+           
+                <!-- <img src="twitter-icon.png" alt="Twitter"> -->
             </a>
         </div>
     </div>
@@ -94,7 +95,7 @@
 
     /* Hero Section */
     .hero {
-        background-color: #eea3e8; /* Dark blue background */
+        background-color: #f74dbe; /* Dark blue background */
         color: white;
         height: 100vh;
         display: flex;
@@ -386,7 +387,185 @@ body {
         </div>
     </div>
 </div>
+------------------------------------------
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
 
-------------------------------------
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+  }
+
+  .icon {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .feature h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  .feature p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 class="title">Top Features</h1>
+  <p class="subtitle">MediaFire is more than just sharing and storage. Take a look at the top features to make your life simple and easy.</p>
+  
+  <div class="features">
+    <div class="feature">
+      <div class="icon">10GB</div>
+      <h2>10GB Free/Up to 4GB per file</h2>
+      <p>With up to 50GB of free space, you can use MediaFire to back up all your important files – even your not-so-important ones too.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">∞</div>
+      <h2>Unlimited bandwidth & downloads</h2>
+      <p>Make sure your downloads are always available and fast. You’ll never hit a bandwidth or download limit with ad-supported downloads, no matter how popular your file is.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">⇪</div>
+      <h2>Easily share after uploading</h2>
+      <p>Share folders and files immediately after they upload. MediaFire makes it easy to share through email, on your website, social media, messenger, or anywhere with a link.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+  }
+
+  .feature h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #007bff;
+  }
+
+  .feature p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .icon {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="features">
+    <div class="feature">
+      <div class="icon">
+        <img src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-delivery-logistics-flat-flat-juicy-fish.png" alt="Truck Icon">
+      </div>
+      <h2>Multiple uploads at once</h2>
+      <p>Upload hundreds or even thousands of files at once through any web browser or with our handy apps for Android, BlackBerry, Windows, iPhone, or iPad.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/folder-invoices.png" alt="Folder Icon">
+      </div>
+      <h2>Organize with ease</h2>
+      <p>Make it easy to find your documents and files by using MediaFire's powerful, yet easy-to-use file manager. Upload, copy, move, and control access to your files from anywhere with your desktop or phone.</p>
+    </div>
+    
+    <div class="feature">
+      <div class="icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/bomb.png" alt="Bomb Icon">
+      </div>
+      <h2>One-Time Links</h2>
+      <p>Keep control of your downloads. Share a file using a free One-Time Link, and your recipient won’t be able to share the link with anyone else. It’s perfect for sensitive personal or work documents!</p>
+    </div>
+  </div>
+</div>
+  
+    
+-----------------------------------------
 </body>
 </html>
