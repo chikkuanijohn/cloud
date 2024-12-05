@@ -21,7 +21,8 @@ def cloud_tech_login(req):
     
 def cloud_tech_logout(req):
     logout(req)
-    return redirect(cloud_tech_login)    
+    return redirect(cloud_tech_login)
+    
 
 def register(req):
     if req.method=='POST':
@@ -36,7 +37,9 @@ def register(req):
             return redirect(register)   
         return redirect(cloud_tech_login) 
     else:
-        return render(req,'register.html')    
+        return render(req,'register.html')  
+
+
     
 def home(req):
     return render(req,'home.html')

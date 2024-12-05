@@ -1,206 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {%load static%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud_Tech</title>
     <link rel="stylesheet" href="/cloud_tech/static/images/home.css">
     <style>
-        /* CSS Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #da05a4; /* Blue background */
-            padding: 10px 20px;
-        }
-
-        .logo img {
-            height: 30px; /* Adjust the height to fit */
-        }
-
-        .menu {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .upgrade-btn {
-            background-color: #28A745; /* Green button */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .upgrade-btn:hover {
-            background-color: #218838;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-
-        .social-icon img {
-            height: 20px; /* Adjust size of the social icon */
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <div class="logo">
-            {% load static %}
-            <img src="{%static 'images/Blue Cloud Minimal Technology Free Logo .png' %}" alt="MediaFire Logo">
-        </div>
-        <div class="menu">
-            <button class="upgrade-btn">UPGRADE</button>
-            <a href="#" class="nav-link">SIGN UP</a>
-            <a href="#" class="nav-link">LOG IN</a>
-            <a href="#" class="nav-link">LOG OUT</a>
-           
-                <!-- <img src="twitter-icon.png" alt="Twitter"> -->
-            </a>
-        </div>
-    </div>
-
-
-
-<style>
-    /* General Reset */
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    body, html {
-        font-family: Arial, sans-serif;
-        height: 100%;
-        margin: 0;
+    
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4fff1;
+      color: #333;
+      line-height: 1.6;
     }
-
+    
+    /* Header Navigation */
+    header {
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px 10px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    nav .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #9a87ee;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+    }
+    
+    .auth-buttons button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+    
+    .btn-register {
+      background-color: #8770f0;
+      color: white;
+    }
+    
+    .btn-login {
+      background-color: transparent;
+      color: #896bdb;
+      border: 1px solid #4CAF50;
+    }
+    
     /* Hero Section */
     .hero {
-        background-color: #f74dbe; /* Dark blue background */
-        color: white;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url('background-pattern.png'); /* Replace with your pattern image */
-        background-size: cover;
-        background-repeat: repeat;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #e8f8e0;
     }
-
-    /* Content Inside Hero */
-    .content {
-        text-align: center;
+    
+    .hero-content {
+      max-width: 50%;
     }
-
-    .content h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        line-height: 1.4;
+    
+    .hero-content h1 {
+      font-size: 3rem;
+      color: #333;
     }
-
-    /* Upload Button */
-    .upload-btn {
-        background-color: #f3b8df; /* Bright blue button */
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
+    
+    .hero-content p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #666;
     }
-
-    .upload-btn:hover {
-        background-color: #0056b3; /* Darker blue on hover */
+    
+    .btn-register-now {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
     }
-</style>
+</style> 
 </head>
 <body>
-<div class="hero">
-    <div class="content">
-        <h1>File storage and sharing made simple</h1>
-        <button class="upload-btn">UPLOAD FILES NOW</button>
-    </div>
-</div>
+  {% load static %}
+  <body>
+      <header>
+          <nav>
+              <div class="logo">
+                  <span>Cloud_Tech</span> 
+              </div>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <!-- <li><a href="#">courses</a></li> -->
+                  <li><a href="about">About</a></li>
+                  <li><a href="contact">Contact</a></li>
+                  <!-- <li><a href=""></a></li> -->
+              </ul>
+              <div class="auth-buttons">
+                  <button class="btn-register">Register</button>
+                  <button class="btn-login">Logout</button>
+              </div>
+          </nav>
+        </header>
 
 
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #b1f087;
-}
+  /* General Reset */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-.as-seen-in {
-    margin: 50px 0;
-    color: #999999;
-}
+  body, html {
+      font-family: Arial, sans-serif;
+      height: 100%;
+      margin: 0;
+  }
 
-.as-seen-in h2 {
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #666666;
-    margin-bottom: 20px;
-}
+  /* Hero Section */
+  .hero {
+      background-color: #f7f1f5; /* Dark blue background */
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('background-pattern.png'); /* Replace with your pattern image */
+      background-size: cover;
+      background-repeat: repeat;
+  }
 
-.logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
+  /* Content Inside Hero */
+  .content {
+      text-align: center;
+  }
 
-.logos img {
-    max-height: 40px;
-    filter: grayscale(100%);
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
+  .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      line-height: 1.4;
+  }
 
-.logos img:hover {
-    opacity: 1;
-}
+  /* Upload Button */
+  .upload-btn {
+      background-color: #f3b8df; /* Bright blue button */
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+  }
+
+  .upload-btn:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+  }
 </style>
 </head>
 <body>
-<div class="as-seen-in">
-<h2>As Seen In</h2>
-<div class="logos">
-    <img src="{%static 'images/gizmodo.svg' %}" alt="Gizmodo">
-    <img src="{%static 'images/lifehacker.svg' %}" alt="Lifehacker">
-    <img src="{%static 'images/cnet.svg' %}" alt="CNET">
-    <!-- <img src="techcrunch-logo.png" alt="TechCrunch"> -->
-    <img src="{%static 'images/engadget.svg' %}" alt="Engadget">
+<!-- <div class="hero">
+  <div class="content">
+      <h1>File storage and sharing made simple</h1>
+      <button class="upload-btn">UPLOAD FILES NOW</button>
+  </div>
+</div> -->
+
+<div class="hero">
+  <div class="content">
+    <h1>File storage and sharing made simple</h1>
+    <!-- Trigger file upload and display file name -->
+    <button class="upload-btn" id="upload-btn">UPLOAD FILES NOW</button>
+
+    <!-- Hidden file input -->
+    <input type="file" id="file-input" style="display: none;" accept="image/*" />
+
+    <!-- Display the selected file name -->
+    <div id="file-name-display" style="margin-top: 20px; color: #555; font-size: 1.1rem;"></div>
+
+    <!-- Display the image preview -->
+    <div id="img-preview-container" style="margin-top: 20px; text-align: center;">
+      <img id="img-preview" style="max-width: 50%; max-height: 300px; display: none; object-fit: contain;margin-left:300px;" />
+    </div>
+  </div>
 </div>
-</div>
 
+<script>
+  // Get the elements
+  const uploadButton = document.getElementById('upload-btn');
+  const fileInput = document.getElementById('file-input');
+  const fileNameDisplay = document.getElementById('file-name-display');
+  const imgPreviewContainer = document.getElementById('img-preview-container');
+  const imgPreview = document.getElementById('img-preview');
 
+  // Show the file input dialog when the "UPLOAD FILES NOW" button is clicked
+  uploadButton.addEventListener('click', function() {
+    fileInput.click();  // Open the file picker
+  });
 
+  // Display the file name and image preview when a file is selected
+  fileInput.addEventListener('change', function() {
+    const file = fileInput.files[0];
+    if (file) {
+      // Display file name
+      fileNameDisplay.textContent = 'Selected file: ' + file.name;
+
+      // Create an image preview
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imgPreview.src = e.target.result;  // Set the image source to the file content
+        imgPreview.style.display = 'block';  // Make the image visible
+      };
+      reader.readAsDataURL(file);  // Read the file as a Data URL (image data)
+    } else {
+      fileNameDisplay.textContent = 'No file selected';
+      imgPreview.style.display = 'none';  // Hide image preview if no file selected
+    }
+  });
+</script>
+
+------------------------
 <style>
     body {
       font-family: Arial, sans-serif;
@@ -564,6 +614,122 @@ body {
     </div>
   </div>
 </div>
+------------------------------------
+<style>
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+  }
+
+  footer {
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+  }
+
+  footer .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  footer .column {
+      margin: 10px;
+      text-align: left;
+  }
+
+  footer .column h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+  }
+
+  footer .column a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+      font-size: 14px;
+  }
+
+  footer .column a:hover {
+      text-decoration: underline;
+  }
+
+  footer .made-in {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  footer .made-in img {
+      display: block;
+      margin: 0 auto 10px;
+  }
+
+  footer .social-icons {
+      margin-top: 10px;
+  }
+
+  footer .social-icons a {
+      margin: 0 5px;
+      display: inline-block;
+  }
+
+  footer .social-icons img {
+      width: 20px;
+      height: 20px;
+  }
+
+  footer .copyright {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #ccc;
+  }
+</style>
+</head>
+<body>
+<footer>
+  <div class="content">
+      <div class="column">
+          <h3>Company</h3>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+      </div>
+      <div class="column">
+          <h3>Tools</h3>
+          <a href="#">MediaFire Mobile</a>
+          <a href="#">Team File Sharing</a>
+      </div>
+      <div class="column">
+          <h3>Upgrade</h3>
+          <a href="#">Professional</a>
+          <a href="#">Business</a>
+      </div>
+      <div class="column">
+          <h3>Support</h3>
+          <a href="#">Get Support</a>
+      </div>
+  </div>
+  <div class="made-in">
+      <p>Made with love in Texas.</p>
+  </div>
+  <div class="social-icons">
+      <a href="#"><img src="{%static 'images/fb.jpg' %}" alt="Facebook"></a>
+      <a href="#"><img src="{%static 'images/twitter.jpg'%}" alt="Twitter"></a>
+      <a href="#"><img src="{%static 'images/aab.jpg'%}" alt="Blogger"></a>
+  </div>
+  <div class="copyright">
+      &copy; 2024 MediaFire Build 121931<br>
+      Advertising | Terms | Privacy Policy | Copyright | Abuse | Credits
+  </div>
+</footer>
+
   
     
 -----------------------------------------
